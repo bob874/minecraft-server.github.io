@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hyenas Hosting</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    border-bottom: 2px solid #bb00ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    z-index: 9999;
+}
+
+.menu-btn { font-size: 30px; cursor: pointer; }
+
+.logo { font-size: 22px; font-weight: bold; color: #bb00ff; }
+
+.nav-right { display: flex; gap: 10px; }
+
+.nav-right a {
+    padding: 8px 12px;
+    background: purple;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-right a:hover { background: #bb00ff; }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #1a1a1a;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar a:hover { background: purple; }
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px 60px;
+}
+
+.hero h1 { font-size: 45px; color: #bb00ff; }
+
+.hero p { color: #ccc; margin-top: 10px; }
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: purple;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn:hover { background: #bb00ff; }
+
+.plans { padding: 60px 20px; text-align: center; }
+
+.plan-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.plan {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.plan h3 { color: #bb00ff; }
+
+.price { font-size: 22px; margin: 10px 0; }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+    <div class="logo">The Hyenas</div>
+
+    <div class="nav-right">
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar" class="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">✖</div>
+
+    <a href="index.html">Home</a>
+    <a href="#plans">Plans</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="season.html">Season</a>
+    <a href="register.html">Register</a>
+    <a href="login.html">Login</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Minecraft Hosting Simulator</h1>
+    <p>Build servers, earn money, upgrade your empire</p>
+
+    <a class="btn" href="register.html">Get Started</a>
+</section>
+
+<!-- PLANS -->
+<section class="plans" id="plans">
+    <h2>Plans</h2>
+
+    <div class="plan-container">
+
+        <div class="plan">
+            <h3>Free</h3>
+            <div class="price">£0/month</div>
+            <a class="btn" href="register.html">Get Started</a>
+        </div>
+
+        <div class="plan">
+            <h3>Standard</h3>
+            <div class="price">£5/month</div>
+            <a class="btn" href="checkout.html?plan=standard&price=5">Checkout</a>
+        </div>
+
+        <div class="plan">
+            <h3>Pro</h3>
+            <div class="price">£12/month</div>
+            <a class="btn" href="checkout.html?plan=pro&price=12">Checkout</a>
+        </div>
+
+        <div class="plan">
+            <h3>Ultimate</h3>
+            <div class="price">£20/month</div>
+            <a class="btn" href="checkout.html?plan=ultimate&price=20">Checkout</a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+function toggleMenu() {
+    let sidebar = document.getElementById("sidebar");
+    sidebar.style.left = (sidebar.style.left === "0px") ? "-260px" : "0px";
+}
+</script>
+
+</body>
+</html>
