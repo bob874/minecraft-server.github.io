@@ -1,0 +1,187 @@
+/* =========================
+   THE HYENAS - GLOBAL STYLE
+   Dark hosting / Minecraft economy theme
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    background: #0d0d0d;
+    color: white;
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.btn {
+    padding: 12px 16px;
+    background: purple;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #bb00ff;
+}
+
+/* =========================
+   AUTH BOX (LOGIN / REGISTER / SEASON)
+   ========================= */
+.container,
+.box {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    width: 340px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+h1 {
+    color: #bb00ff;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: none;
+    background: #111;
+    color: white;
+    outline: none;
+}
+
+/* =========================
+   DASHBOARD LAYOUT
+   ========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #bb00ff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+.card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: #bb00ff;
+}
+
+.card h3 {
+    color: #bb00ff;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   AVATAR (SAPS)
+   ========================= */
+.avatar {
+    font-size: 60px;
+    text-align: center;
+}
+
+/* =========================
+   TEXT COLORS
+   ========================= */
+p {
+    color: #ddd;
+}
+
+small {
+    color: #aaa;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+a {
+    color: #bb00ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   LEADERBOARD
+   ========================= */
+#leaderboard p {
+    background: #111;
+    padding: 10px;
+    margin: 6px 0;
+    border-radius: 8px;
+}
+
+/* =========================
+   SHOP BUTTONS
+   ========================= */
+.shop-item {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+}
+
+/* =========================
+   SERVER STATUS
+   ========================= */
+#server-status {
+    font-weight: bold;
+    color: #00ff88;
+}
+
+/* =========================
+   MOBILE SUPPORT
+   ========================= */
+@media (max-width: 600px) {
+    .container,
+    .box {
+        width: 90%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
